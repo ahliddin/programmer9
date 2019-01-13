@@ -1,0 +1,39 @@
+# Site
+name: ""
+description: ""
+meta_description: "Place for programming-related blog posts and tutorials"
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
+baseurl: 
+google_analytics: 'UA-57159647-6'
+disqus: 'programmer9'
+#mailchimp-list: 'https://anthonylan.us19.list-manage.com/subscribe/post?u=43e8a38e03521aaf4d25c6cb5&amp;id=a451458bec'
+
+# Authors
+authors:
+  ahliddin:
+    name: programmer9
+    display_name: programmer9
+    #gravatar: e8b205a3e626c3db53578c1e0d7922ec
+    email: ahliddin.i@gmail.com
+    web: https://programmer9.com
+    twitter: https://twitter.com/ahliddin_i
+    description: ""
+
+# Plugins
+plugins: 
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-seo-tag
+  - jekyll-sitemap
+    
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+highlighter: rouge
+
+
