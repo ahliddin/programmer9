@@ -30,6 +30,7 @@ To tackle the first one you need the _problem-solving skills_ for the second _co
 To improve your problem-solving skills you need to practice more solving programming challenges.
 _And while practicing read up on the theoretical background the task relates to._<br/>
 
+Here are some free platforms where you can solve programming challenges.
 
 ##### [Codility](https://app.codility.com/programmers)
 
