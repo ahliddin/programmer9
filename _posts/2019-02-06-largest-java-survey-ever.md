@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Largest Java Developer Survey.. Ever"
+title:  "Largest Java Developer Survey 2018"
 author: ahliddin
 categories:
 image: /assets/images/largest-java-survey-ever/java-developer-survey.png
@@ -93,7 +93,7 @@ the competition combined (at 22%).
 %}
 
 #### Which source code management tool dev teams mainly use?
-I'm *not* surprised to see Git dominating the graph below. I *am* surprised to see that Subversion (a.k.a SVN)
+I'm *not* surprised to see Git dominating the graph below. I *am* surprised to see that *Subversion* (a.k.a SVN)
 is still being used by 16% of the developers.
 
 {% include image.html
@@ -103,7 +103,14 @@ is still being used by 16% of the developers.
 
 
 #### Which testing technologies Java developers use?
-All cool here except for 10% of developers that use *None* of testing technologies.. *None*..
+*Robert C. Martin* said in his [talk](https://youtu.be/p0O1VVqRSK0?t=679) about Professionalism in Software Development that
+*"we [programmers] are the surgeons doing an open-heart surgery on the systems of companies.. we are the reason the company makes money or loses money..
+we are the ones who hold within our hands the lifeblood of the company"*.
+
+And yet 10% of developers answered that they use *None* of testing technologies.. *none*..
+Well hello, sleepless night!
+
+I honestly hope that those 10% of participants are just self-learning developers or students that aren't working anywhere yet.
 
 {% include image.html
     caption="Which testing technologies developers use"
@@ -124,6 +131,9 @@ I also wonder if those 8% of respondents that don't use any other non-JVM langua
 
 
 #### Which web frameworks Java developers?
+I only worked with Spring MVC and Spring Boot and I'm glad to see that they are on the top of the list.
+It's interesting though that Spring Boot has overtaken the Spring MVC.
+
 {% include image.html
     caption="Which web frameworks developers use"
     url="/assets/images/largest-java-survey-ever/which_web_frameworks_developers_use.png"
@@ -131,18 +141,31 @@ I also wonder if those 8% of respondents that don't use any other non-JVM langua
 
 
 #### Which ORM frameworks developers use?
+Note in the original article: *Developers could choose more than one answer, so totals do not equal 100%.*
+
+More than half of the developers use *Hibernate*, surprise!
+
+As for 23% that answered *plain old JDBC* and 20% that answered *None* the numbers might not be reflecting reality.
+Since JDBC is not ORM framework those who said *None* might still be using the plain old JDBC.
+
 {% include image.html
     caption="Which ORM frameworks developers use"
     url="/assets/images/largest-java-survey-ever/which_ORM_developers_use.png"
 %}
 
-#### Which database Java developes use?
+#### Which database Java developers use?
+Oracle is on the top of the list, then comes MySQL and PostgreSQL.
+Only 9% of Java developers use *Microsoft SQL*, which is not surprising because it's the *C#*'s niche.
+
+MongoDB is the highest *NoSQL* database with 5%, higher than IBM's relational database DB2.
+
 {% include image.html
     caption="Which database developers use"
     url="/assets/images/largest-java-survey-ever/which_database_developers_use.png"
 %}
 
 #### Which application server developers mainly use?
+Not much to add here, *Tomcat* rules.
 
 {% include image.html
     caption="Which application server developers use"
@@ -150,12 +173,16 @@ I also wonder if those 8% of respondents that don't use any other non-JVM langua
 %}
 
 #### How often Java developers release new versions of code?
+7% of developers release multiple times a day.. that's a bit more than I anticipated.
+Usually it's the big players that hire geniuses and have streamlined processes can afford that..
+
 {% include image.html
     caption="How often do developers release new version"
     url="/assets/images/largest-java-survey-ever/how_often_release_code.png"
 %}
 
 #### Where Java developers located?
+The majority of developers are located in Europe and yet it's hard as never before to hire a good software developer.. at least in Prague.
 
 {% include image.html
     caption="Where developers located"
@@ -163,12 +190,17 @@ I also wonder if those 8% of respondents that don't use any other non-JVM langua
 %}
 
 #### Age distribution of Java developers?
+The majority of the software developers (38%) are 30 - 40 years old.
+
 {% include image.html
     caption="Age distribution of Java developers"
     url="/assets/images/largest-java-survey-ever/developer_age.png"
 %}
 
 #### Where developers get information about Java online?
+The actual winner here should be Google.
+It's just happens that most of the answers are found in Stack Overflow..
+
 {% include image.html
     caption="Where developers get information"
     url="/assets/images/largest-java-survey-ever/where_developers_get_info.png"
@@ -185,6 +217,12 @@ Only 7% are the active members of JUGs.
 %}
 
 #### How much do Java developers contribute to open source?
+I wish I was not the majority here..
+Open source is a great platform for combining the learning and contributing. BTW, here's the great article about [learning a new programming language by contributing to open source](https://hackernoon.com/unconventional-way-of-learning-a-new-programming-language-e4d1f600342c).
+
+Most of the developers have some sort of a pet project that they work on in their free time, and finding extra time to
+contribute to open source is not always easy, considering that 38% of developers are 30 - 40 years old, the time when people usually start getting married and having kids.. bye-bye free time.
+
 {% include image.html
     caption="How much developers contribute to the open source"
     url="/assets/images/largest-java-survey-ever/developers_contribute_to_opensource.png"
