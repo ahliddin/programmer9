@@ -30,6 +30,7 @@ Here's an extract of what I found most interesting.
 The obvious winners so far are Oracle JDK and OpenJDK. Although with upcoming changes in licencing and support the figures might quite change in a next survey.
 I didn't quite understand how 1% of those Java developers survive programming in *Java* with *'None'* JDK. I didn't find any explanation in the original article as well.
 
+
 {% include image.html
     caption="Which JDK developers use?"
     url="/assets/images/largest-java-survey-ever/popularity_of_JDKs_amongst_Java_developers.png"
