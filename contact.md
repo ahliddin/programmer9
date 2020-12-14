@@ -11,7 +11,7 @@ comments: false
     <h6><i>Yeah, and.. no spam, please!</i></h6>
     <h2>Send a Message</h2>
   </div>
-  <form action="https://formspree.io/ahliddin.i@gmail.com" method="POST">
+  <form action="https://formspree.io/f/moqpkyvg" method="POST">
     <label for="name">Name</label>
     <input type="text" id="name" name="name"><br>
     <label for="email">Email Address</label>
