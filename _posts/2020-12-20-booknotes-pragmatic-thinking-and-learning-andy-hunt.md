@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notes from the Pragmatic Thinking and Learning: Refactor Your Wetware"
+title: "Notes from the Pragmatic Thinking and Learning"
 author: ahliddin
 categories:
 image: /assets/images/pragmatic-thinking-and-learning/pragmatic-thinking-and-learning.png
@@ -16,7 +16,7 @@ keywords:
     - improve coding skills
     - tips to improve
     - learning
-description: Book notes from the Pragmatic Thinking and Learning: Refactor Your Wetware
+description: Book notes from the Pragmatic Thinking and Learning
 ---
 
 *It's been almost 2 years since I posted anything, ironically my last post was about the book  [The Subtle Art of Not Giving a F*ck](https://programmer9.com/2019/02/17/booknotes-the-subtle-art-of-not-giving-a-f_ck.html)*
