@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Book notes from the Pragmatic Thinking and Learning: Refactor Your Wetware"
+title: "Notes from the Pragmatic Thinking and Learning: Refactor Your Wetware"
 author: ahliddin
 categories:
 image: /assets/images/pragmatic-thinking-and-learning/pragmatic-thinking-and-learning.png
@@ -16,7 +16,7 @@ keywords:
     - improve coding skills
     - tips to improve
     - learning
-description: Book notes from the Pragmatic Thinking and Learning: Refactor Your Wetware
+description: "Book notes from the Pragmatic Thinking and Learning: Refactor Your Wetware"
 ---
 
 *It's been almost 2 years since I posted anything, ironically my last post was about the book  [The Subtle Art of Not Giving a F*ck](https://programmer9.com/2019/02/17/booknotes-the-subtle-art-of-not-giving-a-f_ck.html)*
@@ -123,7 +123,13 @@ You have to believe that change is possible. If you think you'll fail, you'll be
 Start taking responsibility; ask "why?", "how do you know?"
 
 ***
-*Mistakes are good - plan to making more of them and **learn from it**.* 
+*Mistakes are good - plan to making more of them and **learn from it**.*
+
+***
+Keep notebook, wiki to keep and manage your ideas.
+
+***
+Make thoughtful walking a part of your day. 
   
 
 
