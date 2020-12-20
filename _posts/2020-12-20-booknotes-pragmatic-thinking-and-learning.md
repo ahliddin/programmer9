@@ -94,8 +94,8 @@ Check out [Notion](notion.com) tool or similar alternatives.
 Sends less email and you will receive less email.
 
 ***
-Do *context-friendly* breaks - if you are stuck tired and need a break - go for a walk (alone).
-Do not switch to reading news/Slashdot or even worse checking your email - that's a *major distraction*.
+Do *context-friendly* breaks - if you are  stuck or tired and need a break - go for a walk (alone).
+Do not switch to reading news/Slashdot or checking your email - that's a *major distraction*.
 You can lose your train of thoughts, it's important to keep then in mind.
 
 ***
