@@ -19,7 +19,7 @@ keywords:
 description: Book notes from the Pragmatic Thinking and Learning: Refactor Your Wetware
 ---
 
-*It's been almost 2 years since I posted anything, ironically my last post was about the book  [The Subtle Art of Not Giving a F*ck](https://programmer9.com/2019/02/17/booknotes-the-subtle-art-of-not-giving-a-f_ck.html) *
+*It's been almost 2 years since I posted anything, ironically my last post was about the book  [The Subtle Art of Not Giving a F*ck](https://programmer9.com/2019/02/17/booknotes-the-subtle-art-of-not-giving-a-f_ck.html)*
 
 *Anyways here are the notes from the book I read years ago [Pragmatic Thinking and Learning: Refactor Your Wetware](https://pragprog.com/titles/ahptl/pragmatic-thinking-and-learning/) by Andy Hunt and here are the quotes I liked most:*
 
