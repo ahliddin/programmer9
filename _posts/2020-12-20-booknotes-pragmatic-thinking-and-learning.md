@@ -19,12 +19,12 @@ keywords:
 description: "Book notes from the Pragmatic Thinking and Learning: Refactor Your Wetware"
 ---
 
-*It's been almost 2 years since I posted anything, ironically my last post was about the book  [The Subtle Art of Not Giving a F*ck](https://programmer9.com/2019/02/17/booknotes-the-subtle-art-of-not-giving-a-f_ck.html)*
+*It's been almost 2 years since I posted anything. Ironically my last post was about [The Subtle Art of Not Giving a F*ck](https://programmer9.com/2019/02/17/booknotes-the-subtle-art-of-not-giving-a-f_ck.html)*
 
-*Anyways here are the notes from the book I read years ago [Pragmatic Thinking and Learning: Refactor Your Wetware](https://pragprog.com/titles/ahptl/pragmatic-thinking-and-learning/) by Andy Hunt and here are the quotes I liked most:*
+*Anyways, here are notes from the book I read years ago [Pragmatic Thinking and Learning: Refactor Your Wetware](https://pragprog.com/titles/ahptl/pragmatic-thinking-and-learning/) by Andy Hunt:*
 
 ***
-Alcohol and aging can kill neurons (brain cells), but in rich environment with things to learn, observe, and interact with, you will grow plenty of new neurons and new connections between them.
+Alcohol and aging can kill neurons (brain cells), but in rich environment with things to learn, observe, and interact, you will grow plenty of new neurons and new connections between them.
 
 ***
 Step away from computer to solve hard problems. Go for a walk. Keep the problem in your mind, but don't focus on it - the solution will bubble out.
