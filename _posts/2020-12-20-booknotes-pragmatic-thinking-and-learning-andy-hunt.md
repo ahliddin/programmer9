@@ -6,7 +6,7 @@ categories:
 image: /assets/images/pragmatic-thinking-and-learning/pragmatic-thinking-and-learning.png
 featured: true
 comments: true
-tags: selfdev,programming
+tags: selfdev
 keywords:
     - programming
     - programming skills
