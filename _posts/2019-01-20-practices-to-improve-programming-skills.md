@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Practices to improve your programming skills"
+title: "Practices to improve your programming skills"
 author: ahliddin
 categories:
 image: /assets/images/improve_programming_skills.jpg

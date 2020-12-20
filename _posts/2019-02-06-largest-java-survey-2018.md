@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Largest Java Developer Survey 2018"
+title: "Largest Java Developer Survey 2018"
 author: ahliddin
 categories:
 image: /assets/images/largest-java-survey-ever/java-developer-survey.png

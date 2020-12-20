@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Book notes from the Pragmatic Thinking and Learning: Refactor Your Wetware"
+title: "Book notes from the Pragmatic Thinking and Learning: Refactor Your Wetware"
 author: ahliddin
 categories:
 image: /assets/images/pragmatic-thinking-and-learning/pragmatic-thinking-and-learning.png

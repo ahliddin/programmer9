@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Notes from The Subtle Art of Not Giving a F*ck"
+title: "Notes from The Subtle Art of Not Giving a F*ck"
 author: ahliddin
 categories:
 image: /assets/images/art-of-not-giving-a-f_ck/art-of-not-giving-a-f_ck.png
