@@ -96,7 +96,7 @@ Sends less email and you will receive less email.
 ***
 Do *context-friendly* breaks - if you are  stuck or tired and need a break - go for a walk (alone).
 Do not switch to reading news/Slashdot or checking your email - that's a *major distraction*.
-You can lose your train of thoughts, it's important to keep then in mind.
+You can lose your train of thoughts, it's important to keep them in mind.
 
 ***
 Optimize your personal workflow to maximize context, e.g. use big monitors, learn keyboard shortcuts - basically avoid context switching!
