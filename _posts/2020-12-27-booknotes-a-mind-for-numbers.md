@@ -15,8 +15,7 @@ keywords:
     - learning
 description: "Book notes from A Mind for Numbers: How to Excel at Math and Science"
 ---
-Below are the notes from the book by Barbara Oakley - A Mind for Numbers: How to Excel at Math and Science.  
-In the square brackets I put my personal comments.  
+Below are the notes from the book by Barbara Oakley - [A Mind for Numbers: How to Excel at Math and Science](https://barbaraoakley.com/books/a-mind-for-numbers/).  
 
 ***
 There are two thinking modes - **focused mode** and **diffuse mode**.   
@@ -28,23 +27,20 @@ Diffuse-mode thinking is what happens when you relax your attention and just let
 This relaxation can allow different areas of the brain to hook up and return valuable insights.  
  
 <div class="note-comment">
-
-This suggestion is similar to the one by Andy Hunt in [Pragmatic Thinking and Learning](https://programmer9.com/2020/12/20/booknotes-pragmatic-thinking-and-learning.html), 
+This suggestion is similar to the one by Andy Hunt in <a href="https://programmer9.com/2020/12/20/booknotes-pragmatic-thinking-and-learning.html">Pragmatic Thinking and Learning</a>, 
 where he emphasised that it is important to keep your train of thoughts during the *"diffuse"* mode.
 Switching to reading news or emails or chatting with friends about plans for weekend won't help, but taking a walk, doing dishes while keeping the problem in mind might help.
-
 </div>
 
 ***
 To avoid procrastination [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique)  could help.
 <div class="note-comment"> 
-
 From my personal experience using Pomodoro Technique all the time is redundant, because it adds extra burden to the process.  
 Sometimes it is even disturbing, because when you are *in the zone* 25 minutes passes very fast and you get suddenly interrupted by some Pomodoro app telling you to take a break.  
 However I found it very useful when I am exceptionally lazy or not motivated and try to avoid work at all costs. 
 In those cases the commitment to work for 25 mins without interruption helps a lot.
-I tried several apps and browser extensions and I liked the most the [Forrest](https://www.forestapp.cc), where you grow a virtual tree which dies if you interrupt the committed time for work/study.
-
+I tried several apps and browser extensions and I liked the most the <a href="https://www.forestapp.cc">Forrest</a>, 
+where you grow a virtual tree which dies if you interrupt the committed time for work/study.
 </div>
    
 ***
