@@ -3,7 +3,7 @@ layout: post
 title: "Notes from Java Concurrency in Practice"
 author: ahliddin
 categories:
-image: /assets/images/a-mind-for-numbers/java-concurrency-in-practice.png
+image: /assets/images/java-concurrency-in-practice/java-concurrency-in-practice.png
 featured: true
 comments: true
 tags: java,programming,concurrency
@@ -46,3 +46,5 @@ We collectively refer to **check-then-act** and **read-modify-write** sequences 
 *Compound operations* must execute atomically in order to remain *thread-safe*.  
 Where practical, use existing thread-safe objects - *AtomicLong, AtomicReference<T>, ConcurrentHashMap*, etc.
 
+***
+to be continued...
