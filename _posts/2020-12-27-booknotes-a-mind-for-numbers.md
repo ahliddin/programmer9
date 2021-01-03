@@ -13,6 +13,7 @@ keywords:
     - selfdev
     - problem-solving
     - learning
+    - barbara oakley
 description: "Book notes from A Mind for Numbers: How to Excel at Math and Science"
 ---
 Below are the notes from the book by Barbara Oakley - [A Mind for Numbers: How to Excel at Math and Science](https://barbaraoakley.com/books/a-mind-for-numbers/).  

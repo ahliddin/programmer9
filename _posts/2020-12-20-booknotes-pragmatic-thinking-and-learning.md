@@ -14,8 +14,8 @@ keywords:
     - problem-solving
     - code-reading
     - improve coding skills
-    - tips to improve
-    - learning
+    - pragmatic programmer
+    - andy hunt
 description: "Book notes from the Pragmatic Thinking and Learning: Refactor Your Wetware"
 ---
 
