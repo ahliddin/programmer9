@@ -107,8 +107,93 @@ To *publish* an object safely:
 - Store a ref into a final field of a properly constructed object
 - Store a ref into a field that is guarded by a lock
 
+***
+*Designing thread-safe class*
+- Identify the variables that form object's state
+- Identify the invariants that constrain the state variables
+- Establish policy for concurrent access to the object's state
 
-... to be continued
+***
+*Instance confinement* - encapsulating object within another object - so you can ensure synchronized paths (delegated methods) to the encapsulated object.
+
+***
+Private lock is better that object's intrinsic lock - client code cannot acquire it.
+
+***
+When implementing client-side locking make sure you are using the correct lock (look at documentation what lock is used).
+{% highlight java %}
+@NotThreadSafe
+public class ListHelper<E> {
+    public List<E> list = Collections.synchronizedList(new ArrayList<E>());
+    ...
+    public synchronized boolean putIfAbsent(E x) {
+        boolean absent = !list.contains(x);
+        if (absent)
+            list.add(x);
+        return absent;
+    }
+}
+{% endhighlight %}
+Why wouldn't this work? After all, putIfAbsent is synchronized, right? The problem is that it synchronizes on the
+wrong lock. Whatever lock the List uses to guard its state, it sure isn't the lock on the ListHelper. ListHelper
+provides only the illusion of synchronization; the various list operations, while all synchronized, use different locks,
+which means that putIfAbsent is not atomic relative to other operations on the List. So there is no guarantee that
+another thread won't modify the list while putIfAbsent is executing.
+
+Here's the thread-safe version of it:
+{% highlight java %}
+@ThreadSafe
+public class ListHelper<E> {
+    public List<E> list = Collections.synchronizedList(new ArrayList<E>());
+    ...
+    public boolean putIfAbsent(E x) {
+        synchronized (list) {
+            boolean absent = !list.contains(x);
+            if (absent)
+                list.add(x);
+            return absent;
+        }
+    }
+}
+{% endhighlight %}
+
+***
+Document a class's thread safety guarantees for its clients; document its synchronization policies for its maintainers.  
+Document design decision at its design time - later the details maybe blur - write down before you forget!
+
+***
+Delegating thread-safety to existing thread-safe classes is one of the most effective strategies (e.g. ConcurrentHashMap, etc.)  
+Use ConcurrentHashMap, CopyOnWriteArrayList, CopyOnWriteArraySet and others instead of their "synchronized" peers in **Collections.synchronized***
+
+***
+*size()* and *isEmpty()* in concurrent collections semantically weakened, so they provide an approximation rather than real exact number.
+But in concurrent frameworks they are far less useful.
+
+***
+*copy-on-write* collections are reasonable to use only when iteration is far more common that modification.
+
+***
+Blocking queues are a powerful resource management tool for building reliable applications;
+they make your programs more robust to overload by throttling activities that threaten to produce more work than can be handled.
+
+***
+How to handle InterruptedException:  
+- Propagate the InterruptedException use whenever possible 
+- Restore the interrupt - catch the exception and restore its interrupted status by calling *interrupt* on the current thread
+
+***
+**Synchronizer** - any object that coordinates the control flow of threads e.g. semaphores, barriers, latches. 
+
+***
+**Latch** - acts as a gate; until the latch reaches the terminal state the gate is closed and no thread can pass.  
+Once the latch reaches the terminal state, it cannot change state again, so it remains open forever.
+
+***
+to be continued...
+
+
+
+
 
 
 
