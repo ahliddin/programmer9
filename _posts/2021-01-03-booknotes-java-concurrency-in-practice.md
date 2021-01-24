@@ -26,6 +26,9 @@ However, the [Project Loom](https://wiki.openjdk.java.net/display/loom/Main) mig
 Anyway, here are my notes from the book.
 
 ***
+### PART I - Fundamentals
+***
+#### Thread Safety
 Threads are everywhere - era of multicore processors!  
 Even if your app is single-threaded you might use a framework that calls your classes from multiple threads, so they need to be thread-safe.
 
@@ -75,6 +78,7 @@ All accesses to a mutable state must be preformed with the same lock held - in t
 Avoid holding locks during lengthy computations or operations at risk of not completing quickly (network, I/O operations, etc.)
 
 ***
+#### Sharing Objects
 Locking is not just about mutual exclusions; it is also about memory visibility.  
 To ensure threads can see the most up-to-date values of shared mutable variables the reading and writing threads must synchronize on common lock.
 
@@ -108,6 +112,8 @@ To *publish* an object safely:
 - Store a ref into a field that is guarded by a lock
 
 ***
+#### Composing Objects
+
 *Designing thread-safe class*
 - Identify the variables that form object's state
 - Identify the invariants that constrain the state variables
@@ -162,6 +168,8 @@ Document a class's thread safety guarantees for its clients; document its synchr
 Document design decision at its design time - later the details maybe blur - write down before you forget!
 
 ***
+#### Building Blocks
+
 Delegating thread-safety to existing thread-safe classes is one of the most effective strategies (e.g. ConcurrentHashMap, etc.)  
 Use ConcurrentHashMap, CopyOnWriteArrayList, CopyOnWriteArraySet and others instead of their "synchronized" peers in **Collections.synchronized***
 
@@ -189,11 +197,88 @@ How to handle InterruptedException:
 Once the latch reaches the terminal state, it cannot change state again, so it remains open forever.
 
 ***
+**Barrier** - similar to latches - blocks group of threads until some event. The key difference is that with barrier,
+*all the threads must come together at the barrier point* in order to proceed. Latch waits for event, barrier waits for other threads.  
+A barrier implements the protocol some families use to rendezvous during a day at the mall: "Everyone meet at McDonald's at 6:00; once you get there, 
+stay there until everyone shows up, and then we'll figure out what we're doing next." 
+
+***
+**Semaphore** - is used to control the number of activities that can access certain resource or perform given action at the same time.
+A semaphore manages set of virtual permits; threads can "acquire" permits and "release" permits. If no permit is available, "acquire" blocks until one is (or until interrupted).  
+Using a semaphore you can turn any collection into bounded blocking collection - a semaphore initialized to the desired maximum size of collection.
+The add operation acquires a permit (blocked if no permit available), a successful remove releases a permit, enabling further addition.
+
+***
+**FutureTask** - is used by the Executor framework to represent asynchronous task, and can also be used to represent any 
+potentially lengthy computation that can be started before the results are needed. 
+*Future.get()* returns the result if completed, otherwise blocks until the task transitions from *waiting/running* to *completed* state.  
+
+{% highlight java %}
+public class Preloader {
+    private final FutureTask<ProductInfo> future = new FutureTask<>(Service::loadProductInfo); // new Callable
+    private final Thread thread = new Thread(future);
+    public void start() {
+        thread.start();
+    }
+    public ProductInfo get() throws DataLoadException, InterruptedException {
+        try {
+            return future.get();
+        } catch (ExecutionException e) {
+            throw new DataLoadException(e);
+        }
+    }
+}
+{% endhighlight %}
+
+***
+The less mutable state the easier to ensure thread-safety.  
+Make fields final, unless they need to be mutable.  
+Hold locks for the duration of compound actions.  
+Guard all variables in an invariant with the same lock.  
+Document your synchronization policy.
+
+***
+### PART II - Structuring Concurrent Applications
+***
+#### Task Execution
+
+Thread creation and tear down are not free.  
+Active threads consume system resources, especially memory. When there are more runnable threads than processors,
+threads sit idle. Idle threads tie up a lot of memory putting pressure on garbage collector.
+
+***
+Whenever you see *new Thread(runnable).start()* and you think you might need a more flexible solution in future,
+seriously consider [Executor](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html).
+
+***
+The real performance pay-off comes when there are number of independent, homogeneous tasks that can run concurrently.
+
+***
+#### Cancellation and Shutdown
+
+Java doesn't provide mechanism to safely force a thread to stop. Instead, it provides *interruption* - one thread asks another to stop.  
+Each thread has a boolean interrupted status; interrupted a thread sets its interrupted status to true.
+
+***
+The poorly named static method [Thread.interrupted()](https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupted())
+clears the interrupted status of current threads and returns its previous value. It's the only way to clear the interrupted status.
+The actually check the status use 
+
+***
+When a thread exits due to an uncaught exception, the JVM reports this event to an application-provided [UncaughtExceptionHandler](https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.UncaughtExceptionHandler.html).
+If no handler exists, the default behaviour is to print the stack trace to *System.err*.  
+In long-running apps always use custom implementations of UncaughtExceptionHandler that at least log the exception.
+
+***
+**Daemon** threads do not prevent JVM from shutting down, other threads do.
+
+***
+Avoid finalizers.
+
+***
+#### Avoiding Liveness Hazards
+
 to be continued...
-
-
-
-
 
 
 
