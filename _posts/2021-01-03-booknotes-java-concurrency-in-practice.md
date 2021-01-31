@@ -278,6 +278,64 @@ Avoid finalizers.
 ***
 #### Avoiding Liveness Hazards
 
+**Liveness** - a concurrent application's ability to execute in a timely manner.
+
+***
+**Deadlock** - thread *A* holds lock *L* and tries to acquire lock *M*, while thread *B* holds *M* and tries to acquire lock *L*.   
+A program will be free of lock-ordering deadlocks if all threads acquire the locks in a fixed global order. 
+
+***
+Do no call an alien method with a lock held.  
+Invoking an alien method with lock held is asking for liveness trouble. The alien method might acquire other locks
+(risking deadlock) or block for an unexpectedly long time, stalling other threads that need the lock you hold. 
+
+***
+A program that doesn't hold more than one lock at a time cannot experience lock-ordering deadlock. If you have to use more 
+locks perform global analysis to ensure that lock ordering is consistent across entire application.
+
+***
+Use [Lock.tryLock()](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Lock.html#tryLock()) to detect and recover from deadlock.
+
+***
+Thread dumps include locking info; which thread waiting for or holding which lock.
+
+***
+Livelock is a form of liveness failure, where a thread, while not blocked, still cannot make progress.
+
+***
+#### Performance and Scalability
+
+Avoid premature optimization. First make it right, then make it fast - if it is not already fast enough.
+
+***
+**Scalability** - the ability to improve throughput when additional computing resources (memory, CPU) are added.
+
+***
+Measure, don't guess.
+
+***
+Amdahl's law describes how much a program can theoretically be sped up by additional computing resources,
+based on the proportion of parallelizable and serial components.  
+If *F* is the fraction of the calculation that must be executed serially, then Amdahl's law says that on a machine 
+with *N* processors, we can achieve a speedup of at most:
+{% include image.html
+caption="F - fraction of calculation that must run serially, N - number of processors"
+url="/assets/images/java-concurrency-in-practice/amdahls_law.png"
+%}
+
+***
+Three ways to reduce lock contention:
+- reduce the duration for which the lock is held
+- reduce the frequency with which the locks are requested
+- replace exclusive locks with coordination mechanisms that permit greater concurrency
+
+***
+Shrinking synchronized blocks can improve scalability, but the cost of synchronization is not zero. Breaking one synchronized block into
+multiple synchronized blocks (correctness permitting) at some point becomes counterproductive.  
+It only makes sense to worry about the size of synchronized block when you can move *substantial* computation or blocking operations out of it.
+
+***
+
 to be continued...
 
 
