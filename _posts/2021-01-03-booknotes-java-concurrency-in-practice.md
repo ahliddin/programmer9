@@ -335,6 +335,74 @@ multiple synchronized blocks (correctness permitting) at some point becomes coun
 It only makes sense to worry about the size of synchronized block when you can move *substantial* computation or blocking operations out of it.
 
 ***
+Even though the below code is thread-safe, it is not very efficient, because all methods are guarded by *this* object.
+
+{% highlight java %}
+    @ThreadSafe
+    public class ServerStatus {
+        @GuardedBy("this") public final Set<String> users;
+        @GuardedBy("this") public final Set<String> queries;
+        ...
+        public synchronized void addUser(String u) { users.add(u); }
+        public synchronized void addQuery(String q) { queries.add(q); }
+        public synchronized void removeUser(String u) {
+            users.remove(u);
+        }
+        public synchronized void removeQuery(String q) {
+            queries.remove(q);
+        }
+    }
+{% endhighlight %}
+
+It can be refactored to use a **lock splitting** technique - instead of guarding both users and queries with the *this* lock, we can instead guard each with a separate 
+lock. After splitting the lock, each new finer grained lock will see less locking traffic
+
+{% highlight java %}
+    @ThreadSafe
+    public class BetterServerStatus {
+        @GuardedBy("users") public final Set<String> users;
+        @GuardedBy("queries") public final Set<String> queries;
+        ...
+        public void addUser(String u) {
+            synchronized (users) {
+                users.add(u);
+            }
+        }
+        public void addQuery(String q) {
+            synchronized (queries) {
+                queries.add(q);
+            }
+        }
+        // remove methods similarly refactored to use split locks
+    }    
+{% endhighlight %}
+
+
+***
+*Lock splitting* can sometimes be extended to partition locking on a variablesized set of independent objects, in which
+case it is called **lock striping**. For example, the implementation of ConcurrentHashMap uses an array of 16 locks, each of
+which guards 1/16 of the hash buckets; bucket N  is guarded by  lock N mod 16.
+
+***
+Alternatives to exclusive locks: concurrent collections, [read-write locks](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/ReadWriteLock.html), 
+immutable objects and atomic variables. 
+
+***
+When testing for scalability, the goal is usually to keep the processors fully utilized. Tools like *vmstat* and *mpstat* on 
+Unix systems or *perfmon* on Windows systems can tell you just how "hot" the processors are running.  
+If the CPUs are asymmetrically utilized (some CPUs are running hot but others are not) your first goal should be to find 
+increased parallelism in your program. Asymmetric utilization indicates that most of the computation is going on in a 
+small set of threads, and your application will not be able to take advantage of additional processors. 
+
+***
+If thread is blocked by lock - thread dump indicates *"waiting for monitor entry"*.
+
+***
+Tests are not substitute for code reviews, and vice versa. 
+
+***
+
+
 
 to be continued...
 
