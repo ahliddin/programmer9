@@ -355,7 +355,7 @@ Even though the below code is thread-safe, it is not very efficient, because all
 {% endhighlight %}
 
 It can be refactored to use a **lock splitting** technique - instead of guarding both users and queries with the *this* lock, we can instead guard each with a separate 
-lock. After splitting the lock, each new finer grained lock will see less locking traffic
+lock. After splitting the lock, each new finer grained lock will see less locking traffic:
 
 {% highlight java %}
     @ThreadSafe
