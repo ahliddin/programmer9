@@ -418,9 +418,10 @@ explicit.
 ReentrantLock is not a blanket substitute for synchronized; use it only when you need features that *synchronized* lacks.
 
 ***
-[ReadWriteLock](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/locks/ReadWriteLock.html) 
-- resource can be accessed by multiple *readers* or by single *writer* at a time, not both.
+[ReadWriteLock](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/locks/ReadWriteLock.html) - resource
+can be accessed by multiple *readers* or by single *writer* at a time, not both.
 
+***
 
 to be continued...
 
