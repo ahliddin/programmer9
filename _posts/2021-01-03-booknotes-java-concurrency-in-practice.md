@@ -402,6 +402,24 @@ Tests are not substitute for code reviews, and vice versa.
 
 ***
 
+#### Explicit locks
+
+*synchronized* locking has some limitations - threads waiting for intrinsic locks cannot be interrupted, so thread can be blocked forever.
+Intrinsic locks also must be released in the same block of code in which they are acquired.  
+Unlike intrinsic locking, [ReentrantLock](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/locks/ReentrantLock.html)
+offers a choice of unconditional, polled, timed, and interruptible lock acquisition, and all lock and unlock operations are 
+explicit.
+
+***
+*ReentrantLock* provides the same mutual exclusion and memory visibility guarantees as *synchronized* keyword.  
+*ReentrantLock* should always be released in *final* block!  
+
+***
+ReentrantLock is not a blanket substitute for synchronized; use it only when you need features that *synchronized* lacks.
+
+***
+[ReadWriteLock](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/locks/ReadWriteLock.html) 
+- resource can be accessed by multiple *readers* or by single *writer* at a time, not both.
 
 
 to be continued...
