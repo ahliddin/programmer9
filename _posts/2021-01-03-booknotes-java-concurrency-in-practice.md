@@ -276,6 +276,8 @@ In long-running apps always use custom implementations of UncaughtExceptionHandl
 Avoid finalizers.
 
 ***
+### PART III - Liveness, Performance, and Testing
+***
 #### Avoiding Liveness Hazards
 
 **Liveness** - a concurrent application's ability to execute in a timely manner.
@@ -422,44 +424,31 @@ ReentrantLock is not a blanket substitute for synchronized; use it only when you
 can be accessed by multiple *readers* or by single *writer* at a time, not both.
 
 ***
+*Object.wait* [called on lock instance] atomically releases the lock and asks the OS to suspend the current thread, allowing other threads to
+acquire the lock and therefore modify the object state. Upon waking (after *notify/notifyAll* being called on lock instance), it reacquires the lock before returning.  
 
-to be continued...
+***
+Always test condition predicate before calling *wait*.  
+Always call *wait* in a loop.
 
+***
+Most synchronizers implement common base [AbstractQueuedSynchronizer](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/AbstractQueuedSynchronizer.html)
 
+***
+#### The Java Memory Model
 
+Initialization safety guarantees that for properly constructed objects, all threads will see the correct values of final fields that were set by a constructor.
 
+***
+Initialization safety makes visibility guarantees only for the values that are reachable through *final* fields as of
+the time the constructor finishes.  
+For values reachable through non-final fields, or values that may change after construction, you must use synchronization to ensure visibility.
 
+***
+A data-race occurres when a variable reads and writes are not ordered by *"happens-before"*. A correctly synchronized program  
+is one with no data races, exhibits sequential consistency, meaning all actions happen in a fixed, global order.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+***
+*Data race* or *race condition* - when getting the right answer depends on lucky timing.  
+The most common type of race condition is *"check-then-act"*, where a potentially *stale* observation (*check*) is used to make
+a decision on what to do next.
