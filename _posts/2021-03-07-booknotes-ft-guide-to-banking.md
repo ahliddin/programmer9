@@ -77,6 +77,47 @@ Ultra-safe banks hold 20% more assets than liabilities. Normally banks hold just
 **Liabilities** - deposits (and other loads to the bank).  
 **Permanent Capital** - money put in by its owners. Can't be withdrawn, but shares could be sold.  
 
+***
+Investment bankers make a lot of money - banks spend 35-60% of income for employee compensation due to their relationships
+with clients. If they leave, they will take clients as well.
+
+***
+Market maker - brokerage firm to satisfy the supply and demand of the financial markets; if investor needs to buy it sells, 
+if investor needs to sell it buys. Market makers are compensated for the risks.
+
+***
+**Leasing** - equipment owner (*the lessor*) conveys the right to use the equipment in return for the regular rental payments
+by the user of equipment (*the lessee*) over an agreed period of time. *Lessee does not become the owner!*
+
+***
+**Operating lease** - commit the lessee to only a short-term contract or one that can be terminated at short notice.  
+Usually, with an operating lease, the lessor retains the obligation for repairs, maintenance and insurance.
+It is clear why equipment which is subject to rapid obsolescence and frequent breakdown is often leased out on an operating lease.
+
+***
+**Finance lease** (also called a *capital lease* or a *full payout lease*) - the finance provider expects to recover 
+the full cost (or almost the full cost) of the equipment, plus interest, over the period of the lease.
+With this type of lease the lessee usually has no right of cancellation or termination. Despite the absence of legal
+ownership the lessee will have to bear the risks and rewards that normally go with ownership.
+
+***
+*Bond* is a long-term contract in which the *bondholder* lends money to a company, government or some other organisation.
+In return the company or government, etc., promises to make predetermined payments (usually regular) in the future 
+which may consist of interest and a capital sum at the end of the bond’s life.
+
+***
+When governments or corporations find themselves in need of short-term funds they may sell an instrument (security) 
+which carries the promise to pay, say £10m in 30 days from now. The purchaser of that promise will not pay the full £10m 
+because they want to receive an effective interest rate for lending. So they might pay, say £9.9m. 
+Thus the security is sold for less than **face value** (**par** or **nominal value**).  
+The **discount** is the difference between face value and purchase price.  
+The **yield**, the rate of interest gained by the holder, occurs when the instrument reaches maturity and the face value is paid by the issuer to the holder.
+
+***
+**Debentures** - the most secured type of bond, secured by either a fixed or a floating charge against the firm’s assets.
+Debentures secured on property may be referred to as *mortgage debentures*. With a floating-charge debenture the company
+has a high degree of freedom to use its assets as it wishes, such as sell them or rent them out,
+until it commits a default which ‘crystallises’ the floating charge.
 
 ***
 to be continued...
