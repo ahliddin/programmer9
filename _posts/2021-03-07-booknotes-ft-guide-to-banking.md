@@ -120,4 +120,56 @@ has a high degree of freedom to use its assets as it wishes, such as sell them o
 until it commits a default which ‘crystallises’ the floating charge.
 
 ***
+**Derivative** is an asset whose performance is based on (derived from) the behaviour of the value of an *underlying*
+asset. The most common *underlyings* include commodities, shares, bonds, share indices, currencies and interest rates.  
+Derivatives are contracts which give the right, and sometimes the obligation, to buy or sell a quantity of the underlying,
+or benefit in another way from a rise or fall in the value of the underlying.
+
+***
+**Forward contract** is an agreement between two parties to undertake an exchange at an *agreed future date*, and a *price agreed now*.  
+Olive growers in ancient Greece unwilling to accept the risk of a low price for their crop when harvested months later
+would enter into forward agreements whereby a price was agreed for delivery at a specific time.
+This reduced uncertainty for both the grower and the purchaser of the olives.
+
+***
+**Future contracts** are the same as forwards, but are more regulated - traded on a regulated exchange, no direct transactions between a buyer and seller.
+
+***
+Majority of contracts are *closed out* before expiry - speculators don't need 50 tons of coffee or 1500 kg of juice so
+they will *reverse their order* - if they bought futures for 50t of coffee they will sell a future for 50t. 
+
+***
+**Over-the-counter instrument** is a security traded in come context *other than* on a formal exchange (NYSE, NASDAQ, etc.)
+
+***
+Derivatives users are hedgers, speculators, arbitrageurs.  
+**Hedgers**: to hedge is to enter into a transaction which protects a business or assets against changes in some underlying.  
+**Speculators**: obtain profit on price changes by buying/selling. They are quick to spot new opportunities, and able to sell
+before buying (to **short* the market) to profit from fall. Speculators are important to create market liquidity.  
+**Arbitrageurs**: exploit price differences on the same instrument or similar assets, buy at lower price and immediately resell at higher.
+They usually trade on two different markets ensuring pricing efficiency - their act of buying/selling tend to reduce price anomalies.
+
+***
+**Interest rate swaps** - arrangement between two parties to exchange interest rate payments where the notional principal is identical for each.
+For example, the first company may be paying fixed rate interest but prefers to pay floating rates. The second company
+may be paying floating rates of interest, which go up and down with LIBOR, but would benefit from a switch to a fixed obligation.
+
+***
+Under a **credit default swap (CDS)** the seller of protection receives a regular fee (usually every three months over a period
+of years) from the buyer of protection (BP), and in return promises to make a pay off should the underlying specified
+reference entity (e.g. BP) default on its obligations with regard to a reference obligation, i.e. a specific bond or loan.
+
+***
+**Central Bank** - bank for other banks. CB usually saves only big banks with big impact on economics and society.
+It lets small banks go bust to encourage other banks not to take big risks and hope CB will bail them out if they fail.
+
+***
+Central Bank controls the issue of bank notes and coins. Notes are issued to commercial banks as they require, but in return their reserves in CB are surrendered.
+
+***
+**National Debt** - the amount of outstanding government borrowings raised by selling *Treasury bills* and bonds.
+
+***
+
+***
 to be continued...
